@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TAGS</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="edit_location">Entrer la location</string>
+    <string name="button_send">Send</string>
+    <string name="variable_1">TAG1</string>
+    <string name="variable_2">TAG2</string>
+    <string name="button_list_activity">GOgoGO</string>
+</resources>
