@@ -25,7 +25,9 @@ public class CustomAdapter extends ArrayAdapter <String> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE); // on cree un inflater a partir de notre contexte
+        // on cree un inflater a partir de notre contexte
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //Linking Elements with parts of the view
         View rowView = inflater.inflate(R.layout.row_layout, parent, false);
         TextView firstLine = (TextView) rowView.findViewById(R.id.first_line_row);
         TextView secondLine = (TextView) rowView.findViewById(R.id.second_line_row);
