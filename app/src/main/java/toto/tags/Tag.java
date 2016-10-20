@@ -13,6 +13,7 @@ public interface Tag {
     public String nom = "les tags";
     public List conditions = new ArrayList();
 
+    //public void Update();
     public void Affiche();
     public void Execute(Context c, Intent intent);
 }
