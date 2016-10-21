@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startListActivity(View view){
 
-        Intent intent = new Intent(this, AcceuilTags.class);
+        Intent intent = new Intent(this,AcceuilTags.class);
         startActivity(intent);
     }
 }
