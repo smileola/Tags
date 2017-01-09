@@ -6,13 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import toto.tags.Factory.ConTagFactory;
+import toto.tags.Tags.TagLocation;
+
 public class MainActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
-
+    private ConTagFactory factory;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        factory = new ConTagFactory();
     }
     //applelée quand on clique sur le bouton
     public void sendMessage(View view){
@@ -35,13 +39,13 @@ public class MainActivity extends AppCompatActivity {
         String message = editLocation.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
 
-        TagLocation locationTag = new TagLocation("Tag de Location test");
-        locationTag.Execute(this, intent);
+        TagLocation locationTagExample = factory.createTagLocation(message,this, intent);
+        locationTagExample.Execute();
 
     }
     public void startListActivity(View view){
 
         Intent intent = new Intent(this,AcceuilTags.class);
         startActivity(intent);
-    }
+}
 }

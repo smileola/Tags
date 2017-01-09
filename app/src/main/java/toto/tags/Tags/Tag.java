@@ -1,4 +1,4 @@
-package toto.tags;
+package toto.tags.Tags;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,9 @@ public interface Tag {
     public List conditions = new ArrayList();
 
     //public void Update();
+    //Context c, Intent intent
     public void Affiche();
-    public void Execute(Context c, Intent intent);
+    public void Execute();
+    public String getTitre();
+    public String getContenu();
 }

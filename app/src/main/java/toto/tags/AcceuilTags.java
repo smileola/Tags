@@ -4,6 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import toto.tags.Tags.Tag;
+import toto.tags.Tags.TagNote;
+
 public class AcceuilTags extends AppCompatActivity {
 
 
@@ -17,13 +23,12 @@ public class AcceuilTags extends AppCompatActivity {
     }
 
     private CustomAdapter prepareAdapter(){
-        //Placeholder should access a list with a number of tags
-        String [] values = new String[] {"Android", "iPhone", "WindowsMobile",
-                "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-                "Linux", "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux",
-                "OS/2", "Ubuntu", "Windows7", "Max OS X", "Linux", "OS/2",
-                "Android", "iPhone", "WindowsMobile" };
-        CustomAdapter adapter = new CustomAdapter(this, values);
+        List<Tag> values = new ArrayList<Tag>();
+        values.add(new TagNote("Salut","Premier Tag"));
+        values.add(new TagNote("YO!","2nd Tag"));
+        values.add(new TagNote("Hey","Troisieme Tag"));
+        values.add(new TagNote("Coucou","4eme Tag"));
+        final CustomAdapter adapter = new CustomAdapter(this, values);
         return adapter;
     }
 }
